@@ -23,7 +23,7 @@ paginate = 8
 
 [params]
   author = "John Doe"
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  description = "Dings zu demm Bumms"
   menu_item_separator = " - "
   [[params.social]]
     icon = "github"

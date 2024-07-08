@@ -1,7 +1,11 @@
 baseURL = "https://spizzl.github.io"
 languageCode = "en-us"
 # Title of your site
-title = "Spizzl's Blog"
+
+
+
+description="test"
+title = "Hennlo"
 # How many feed entries to load at once
 paginate = 6
 theme = "m10c"
