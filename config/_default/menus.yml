@@ -1,0 +1,9 @@
+main:
+  - name: "About"
+    weight: 100
+    identifier: "about"
+    url: "/"
+  - name: "My Blog"
+    weight: 200
+    identifier: "blog"
+    url: "/blog/"

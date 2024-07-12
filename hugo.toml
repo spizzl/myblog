@@ -1,0 +1,11 @@
+baseURL = 'florin.woeginger.de'
+languageCode = 'en-us'
+title = 'Spizzls Blog'
+theme = "m10c"
+authour = "Florin"
+description = "Dings diggah"
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Diggah"
+  url = "/tags/"

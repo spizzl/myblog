@@ -1,0 +1,35 @@
+title: "Florin"
+author: "Florin Wöginger"
+copyright: "2024"
+description: "Dingsbumms Test"
+avatar: "images/avatar.jpg" 
+menu_item_separator: "|"
+favicon: "favicons/"
+describeme: ["Developer.", "Hacker.", "Mate Addict :3"]
+
+homepage: 
+  - "about"
+
+
+singleDateFormat: "2006-02-01"
+indexDateFormat: "2006-02-01"
+listDateFormat: "2006-02-01"
+
+
+style:
+  darkestColor: "#252130"
+  darkColor: "#353b43"
+  lightColor: "#ebeeff"
+  lightestColor: "#ffffff"
+  primaryColor: "#c75c5c"
+
+
+social:
+  "GitHub":
+    icon: "github"
+    title: "GitHub"
+    url: "https://github.com/spizzl"
+  "Email":
+    icon: "mail"
+    title: "e-mail"
+    url: "mailto:florin@woeginger.de"
