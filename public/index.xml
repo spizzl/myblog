@@ -6,8 +6,15 @@
     <description>Recent content in Home on Spizzls Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2024 22:57:31 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2024 05:57:06 +0200</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>//localhost:1313/blog/test/</link>
+      <pubDate>Thu, 25 Jul 2024 05:57:06 +0200</pubDate>
+      <guid>//localhost:1313/blog/test/</guid>
+      <description>Test test</description>
+    </item>
     <item>
       <title>D</title>
       <link>//localhost:1313/blog/d/</link>
