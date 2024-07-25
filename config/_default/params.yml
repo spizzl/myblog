@@ -2,12 +2,12 @@ title: "Florin"
 author: "Florin Wöginger"
 copyright: "2024"
 description: "Dingsbumms Test"
-avatar: "images/avatar.jpg" 
+avatar: "images/avatar.jpg"
 menu_item_separator: "|"
 favicon: "favicons/"
-describeme: ["Developer.", "Hacker.", "Mate Addict :3"]
+describeme: ["Student.", "Coder.", "Mate Addict :)"]
 
-homepage: 
+homepage:
   - "about"
 
 
