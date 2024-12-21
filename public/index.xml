@@ -13,7 +13,7 @@
       <link>//localhost:1313/blog/test/</link>
       <pubDate>Thu, 25 Jul 2024 05:57:06 +0200</pubDate>
       <guid>//localhost:1313/blog/test/</guid>
-      <description>Test test</description>
+      <description>&lt;p&gt;Test test&lt;/p&gt;</description>
     </item>
     <item>
       <title>D</title>
@@ -37,11 +37,11 @@
       <description></description>
     </item>
     <item>
-      <title>A</title>
+      <title>Lost in the Shell? Github Copilot CLI Came to help you!</title>
       <link>//localhost:1313/blog/a/</link>
       <pubDate>Thu, 11 Jul 2024 22:57:17 +0200</pubDate>
       <guid>//localhost:1313/blog/a/</guid>
-      <description>Eint Test Nichts weiter</description>
+      <description>&lt;p&gt;Propably you are already familiar with the problem:&lt;/p&gt;&#xA;&lt;p&gt;As a hacker, that you are you want to make the most within the shell but sometimes you end up not knowing how a certain task can be easily done. You know that in your back of your head but you just forgot.&lt;/p&gt;&#xA;&lt;p&gt;Well, glad Github Copilot comes for you to help out.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/lostintheshell/shell.jpg&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

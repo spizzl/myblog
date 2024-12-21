@@ -9,7 +9,7 @@
 	<meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
-	{{ $style := resources.Get "css/homepage.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
+	{{ $style := resources.Get "css/homepage.scss" | css.Sass | resources.Minify | resources.Fingerprint -}}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 	{{ with .OutputFormats.Get "rss" -}}
 	{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
