@@ -1,5 +1,5 @@
-baseURL = "https://example.com"
-title = "Your title"
+baseURL = "https://florin.woeginger.de"
+title = "FuzzyWood Blog"
 themesDir = "../.."
 theme = "m10c"
 paginate = 8
