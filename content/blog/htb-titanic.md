@@ -1,7 +1,7 @@
 +++
 title = 'Hack the Box - Titanic'
 date = 2025-03-05T15:01:00+01:00
-draft = false
+draft = true
 difficulty = "easy"
 +++
 
