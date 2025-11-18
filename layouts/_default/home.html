@@ -10,11 +10,16 @@
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
 	{{ $style := resources.Get "css/homepage.scss" | css.Sass | resources.Minify | resources.Fingerprint -}}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 	{{ with .OutputFormats.Get "rss" -}}
 	{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 	{{ end }}
-
+    {{ with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{ end }}
+    {{ with resources.Get "css/background.css" | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{ end }}
 	</head>
 	<body>
 
@@ -24,7 +29,7 @@
 	</div>
 	
 
-	<div class="floating">
+	<div class="face-card">
 		<a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
 		<h1>Florin Wöginger</h1>
 		<div id="typewriter"></div>
@@ -47,8 +52,12 @@
       {{- end }}
 	</div>
 
+  <div class="face-card">
+    <h1>Hello</h1>
+    </div>
+
 	<footer>
-		<p>© 2025. All rights reserved.</p>
+		<p class="footer-text">© 2025. All rights reserved.</p>
 	</footer>
 	</body>
 </html>

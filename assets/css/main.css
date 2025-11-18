@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Sansation';
+  src: "../static/fonts/Sansation-Regular.ttf", "../static/fonts/Sansation-Bold.ttf";
+}
+body {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(#8321d5 25%, #02092f 50%, #02092f 50%, #8321d5 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sansation';
+}
+
+
+  .footer-text {
+    color: white;
+    font-size: 0.9em;
+  }
+
+  footer {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @media (max-height: 350px) {
+    .wrap {
+      perspective: 210px;
+    }
+  }
