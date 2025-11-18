@@ -1,5 +1,3 @@
-
-
 html {
   height: 100%;
   overflow: hidden;
@@ -9,11 +7,12 @@ html {
 body {
   position: relative;
   height: 100%;
-  background: linear-gradient(#c74242 25%, #ebeeff 50%, #ebeeff 50%, #c74242 100%);
+  background: linear-gradient(#8321d5 25%, #02092f 50%, #02092f 50%, #8321d5 100%);
 }
 
 
 .app-header-avatar {
+  user-select: none;
   width: 15rem;
   height: 15rem;
   border-radius: 100%;
@@ -21,16 +20,16 @@ body {
 }
 
 .floating {
-  background-color:rgba(208,250,255,0.9);
-  border-radius:.35em;
-  box-shadow:0 0 0.5em rgba(0,0,0,0.3);
-  box-sizing:border-box;
-  left:50%;
-  padding:10vmin;
-  position:fixed;
-  text-align:center;
-  top:50%;
-  transform:translate(-50%, -50%);
+  background-color: rgba(208, 250, 255, 0.9);
+  border-radius: .35em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 10vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrap {
@@ -42,25 +41,36 @@ body {
   perspective-origin: 50% 50%;
 }
 
-.top-plane, .bottom-plane {
+.top-plane,
+.bottom-plane {
   width: 200%;
   height: 130%;
   position: absolute;
   bottom: -30%;
   left: -50%;
   background-image: -webkit-linear-gradient(#ebeeff 2px, transparent 2px), -webkit-linear-gradient(left, #ebeeff 2px, transparent 2px);
-  background-size: 100px 100px,100px 100px;
-  background-position: -1px -1px,-1px -1px;
-  transform: rotateX(85deg);
+  background-size: 100px 100px, 100px 100px;
+  background-position: -1px -1px, -1px -1px;
+  transform: rotateX(90deg);
   animation: planeMoveTop 3s infinite linear;
 }
 
+
+
 .bottom-plane {
-  transform: rotateX(-85deg);
+  transform: rotateX(-90deg);
   top: -30%;
   animation: planeMoveBot 10s infinite linear;
 }
 
+.icon-wrapper {
+  display: inline-block;
+  width: 5.4em;
+  height: 5.4em;
+  margin: 0 1.4rem;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+}
 
 .icon {
   display: inline-block;
@@ -69,38 +79,43 @@ body {
   margin-top: 1.4rem;
 }
 
+
+
+
 footer {
   position: fixed;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0px;
   left: 50%;
-  transform:translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 
 @keyframes planeMoveTop {
   from {
-    background-position: 0px -100px,0px 0px;
+    background-position: 0px -100px, 0px 0px;
   }
+
   to {
     background-position: 0px 0px, 100px 0px;
   }
 }
+
 @keyframes planeMoveBot {
   from {
-    background-position: 0px 0px,0px 0px;
+    background-position: 0px 0px, 0px 0px;
   }
+
   to {
     background-position: 0px -100px, 100px 0px;
   }
 }
+
 @media (max-height: 350px) {
   .wrap {
     perspective: 210px;
   }
 }
-
-

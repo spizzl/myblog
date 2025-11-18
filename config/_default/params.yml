@@ -1,7 +1,7 @@
 title: "Florin"
 author: "Florin Wöginger"
 copyright: "2024"
-description: "Dingsbumms Test"
+description: "My Personal Website"
 avatar: "images/avatar.jpg"
 menu_item_separator: "|"
 favicon: "favicons/"
@@ -31,5 +31,9 @@ social:
     url: "https://github.com/spizzl"
   "Email":
     icon: "mail"
-    title: "e-mail"
+    title: "My E-mail"
     url: "mailto:florin@woeginger.de"
+  "Mastadon":
+    icon: "twitter"
+    title: "Mastodon"
+    url: "https://infosec.exchange/@fuzzywood"
