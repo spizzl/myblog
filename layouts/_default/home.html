@@ -33,34 +33,51 @@
 	<div class="top-plane"></div>
 	<div class="bottom-plane"></div>
 	</div>
-	
-
-	<div class="face-card" id="page1">
-		<a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-		<h1>Florin Wöginger</h1>
-		<div id="typewriter"></div>
-		<script type="text/javascript">
-			const instance = new Typewriter('#typewriter', {
-				strings: {{ .Site.Params.describeme }},
-				autoStart: true,
-				cursor: "▌",
-				loop: true,
-			});
-		</script>
-      {{- with .Site.Params.social }}
-      <div class="app-header-social">
-        {{ range . }}
-          <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
-            {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .title) }}
-          </a>
-        {{ end }}
-      </div>
-      {{- end }}
-	</div>
-  <div class="face-card" id="page2">
- <h1>Page 2</h1>
+<div class="page-container">
+  <div id="cube-container">
+  <div id="cube">
+    <div class="face-card" id="page1">
+      <div class="face-content">
+        <a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
+        <h1>Florin Wöginger</h1>
+        <div id="typewriter"></div>
+        <script type="text/javascript">
+          const instance = new Typewriter('#typewriter', {
+            strings: {{ .Site.Params.describeme }},
+            autoStart: true,
+            cursor: "▌",
+            loop: true,
+          });
+        </script>
+          {{- with .Site.Params.social }}
+          <div class="app-header-social">
+            {{ range . }}
+              <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
+                {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .title) }}
+              </a>
+            {{ end }}
+          </div>
+          {{- end }}
+        </div>
     </div>
-
+    <div class="face-card" id="page2">
+      <div class="face-content">
+        <h1>Page 2</h1>
+      </div>
+    </div>
+    <div class="face-card" id="page3">
+      <div class="face-content">
+        <h1>Page 3</h1>
+      </div>
+    </div>
+    <div class="face-card" id="page4">
+      <div class="face-content">
+        <h1>Page 4</h1>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 	<footer>
 		<p class="footer-text">© 2025. All rights reserved.</p>
 	</footer>

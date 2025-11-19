@@ -8,6 +8,7 @@ html {
   font-family: 'Sansation';
   src: "../static/fonts/Sansation-Regular.ttf", "../static/fonts/Sansation-Bold.ttf";
 }
+
 body {
   position: relative;
   height: 100%;
@@ -19,24 +20,32 @@ body {
   font-family: 'Sansation';
 }
 
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .footer-text {
-    color: white;
-    font-size: 0.9em;
-  }
+.footer-text {
+  color: white;
+  font-size: 0.9em;
+}
 
-  footer {
-    position: fixed;
+footer {
+  position: fixed;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+@media (max-height: 350px) {
+  .wrap {
+    perspective: 210px;
   }
-  @media (max-height: 350px) {
-    .wrap {
-      perspective: 210px;
-    }
-  }
+}

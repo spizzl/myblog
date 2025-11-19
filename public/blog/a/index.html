@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Lost in the Shell? Github Copilot CLI Came to help you! // Spizzls Blog</title>
+    <link rel="shortcut icon" href="favicons/" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.140.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Florin Wöginger" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.ad109709e5c8154ebf1cd3e1db602b264931c5203563be5cc27848444c7a93c1.css" />
+    
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lost in the Shell? Github Copilot CLI Came to help you!">
+  <meta name="twitter:description" content="Propably you are already familiar with the problem: As a hacker, that you are, you want to make the most within the shell but sometimes you end up not knowing how a certain task can be easily done. You know that in your back of your head but you just forgot.
+Well, gladly Github Copilot comes for you to help out.
+Step 0: Installing If you are like me in Arch Linux you can install the cli tool simply by typing">
+
+    <meta property="og:url" content="//localhost:1313/blog/a/">
+  <meta property="og:site_name" content="Spizzls Blog">
+  <meta property="og:title" content="Lost in the Shell? Github Copilot CLI Came to help you!">
+  <meta property="og:description" content="Propably you are already familiar with the problem: As a hacker, that you are, you want to make the most within the shell but sometimes you end up not knowing how a certain task can be easily done. You know that in your back of your head but you just forgot.
+Well, gladly Github Copilot comes for you to help out.
+Step 0: Installing If you are like me in Arch Linux you can install the cli tool simply by typing">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-07-11T22:57:17+02:00">
+    <meta property="article:modified_time" content="2024-07-11T22:57:17+02:00">
+
+
+  </head>
+  <body>
+
+    
+    <header class="app-header">
+      <a href="//localhost:1313/"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Florin Wöginger" /></a>
+      <span class="app-header-title">Spizzls Blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">About</a>
+            |
+          
+          <a class="app-header-menu-item" href="/blog/">My Blog</a>
+      </nav>
+      <p>Dingsbumms Test</p>
+      <div class="app-header-social">
+        
+          <a href="mailto:florin@woeginger.de" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+          </a>
+        
+          <a href="https://github.com/spizzl" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Lost in the Shell? Github Copilot CLI Came to help you!</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 11, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><img src="/images/lostintheshell/shell.jpg" alt="alt"></p>
+<h3 id="propably-you-are-already-familiar-with-the-problem">Propably you are already familiar with the problem:</h3>
+<p>As a hacker, that you are, you want to make the most within the shell but sometimes you end up not knowing how a certain task can be easily done. You know that in your back of your head but you just forgot.</p>
+<p>Well, gladly Github Copilot comes for you to help out.</p>
+<h3 id="step-0-installing">Step 0: Installing</h3>
+<p>If you are like me in Arch Linux you can install the cli tool simply by typing</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/packages/github-copilot-cli
+</span></span><span style="display:flex;"><span>cd github-copilot-cli
+</span></span><span style="display:flex;"><span>makepkg -si
+</span></span></code></pre></div><p>In order to authenticate with your Github Account type</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>github-copilot-cli auth
+</span></span></code></pre></div><p>Now in order to add the tool to my path i added</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># .zshrc</span>
+</span></span><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>github-copilot-cli alias -- <span style="color:#e6db74">&#34;</span>$0<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>to my .zshrc file or your resource file of your choice. And now you are ready to go&hellip;.</p>
+<h3 id="1-getting-to-know-the-tool">1. Getting to know the Tool</h3>
+<p>Lets start up with something easy. I want to look for every file with the ending &ldquo;.tmp&rdquo; in my home directory and want to directly delete it. A command that you should already be familiar with.</p>
+<p>In order order to ask copilot for the command you just promt it with</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>fuzzywood$<span style="color:#f92672">]</span> gh? <span style="color:#e6db74">&#34;run a command that searches my homedirectory for files that end with *.tmp and remove it&#34;</span>
+</span></span></code></pre></div><p>And The magic happens&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ──────────────────── Command ────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>find ~ -name <span style="color:#e6db74">&#34;*.tmp&#34;</span> -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ────────────────── Explanation ──────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>○ find is used to list files.
+</span></span><span style="display:flex;"><span>  ◆ ~ specifies that we start the search in the home directory of the current user.
+</span></span><span style="display:flex;"><span>  ◆ -name <span style="color:#e6db74">&#34;*.tmp&#34;</span> stipulates that we search <span style="color:#66d9ef">for</span> files ending in .tmp.
+</span></span><span style="display:flex;"><span>  ◆ -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> executes the rm command <span style="color:#66d9ef">for</span> each file found.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#f92672">{}</span> is replaced by the file name.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#ae81ff">\;</span> specifies the end of the command to execute.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ✅ Run this command
+</span></span><span style="display:flex;"><span>  📝 Revise query
+</span></span><span style="display:flex;"><span>❯ ❌ Cancel
+</span></span></code></pre></div><h3 id="2-spicing-things-up">2. Spicing things up</h3>
+<p>Now lets try to alter the request&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ───────────────────── Query ─────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1<span style="color:#f92672">)</span> run a command that searches my homedirectory <span style="color:#66d9ef">for</span> files that end with2<span style="color:#f92672">)</span> the letters can be lowercase as well as uppercase also count the files that where
+</span></span><span style="display:flex;"><span>*.tmp and remove it                                                    deleted and print it out
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ──────────────────── Command ────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>find ~ -iname <span style="color:#e6db74">&#34;*.tmp&#34;</span> -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> -exec echo <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> | wc -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ────────────────── Explanation ──────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>○ find is used to list files.
+</span></span><span style="display:flex;"><span>  ◆ ~ specifies that we start the search in the home directory.
+</span></span><span style="display:flex;"><span>  ◆ -iname <span style="color:#e6db74">&#34;*.tmp&#34;</span> specifies that we search <span style="color:#66d9ef">for</span> files ending in .tmp <span style="color:#66d9ef">case</span>-insensitively.
+</span></span><span style="display:flex;"><span>  ◆ -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> executes the rm command <span style="color:#66d9ef">for</span> each file found.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#f92672">{}</span> is replaced by the file name.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#ae81ff">\;</span> specifies the end of the command.
+</span></span><span style="display:flex;"><span>  ◆ -exec echo <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> executes the echo command <span style="color:#66d9ef">for</span> each file found.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#f92672">{}</span> is replaced by the file name.
+</span></span><span style="display:flex;"><span>    ◇ <span style="color:#ae81ff">\;</span> specifies the end of the command.
+</span></span><span style="display:flex;"><span>○ | wc -l counts the number of lines in the output of the previous command.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ✅ Run this command
+</span></span><span style="display:flex;"><span>❯ 📝 Revise query
+</span></span><span style="display:flex;"><span>  ❌ Cancel
+</span></span></code></pre></div><p>And Et voilà! We have the command exactly how we want it. The command can now be executed exatly the way we wanted it</p>
+<h3 id="3-pushing-the-limits">3. Pushing the Limits</h3>
+<p>Now we want to try to push the tool until its limits. So lets try the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>fuzzywood$<span style="color:#f92672">]</span> gh? <span style="color:#e6db74">&#34;Please search for every file in my home directory and output the results in a csv sheet with the following rows:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">horizontal rule
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">incresing File id,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">File Name,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Permissions,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Name of the Subfolder, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">first line of content if it is readable.horizontal rule
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">The CSC File is placed directly in the home folder.&#34;</span>
+</span></span></code></pre></div><p>we get the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>──────────────────── Command ────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Sorry. GitHub Copilot doesnt know how to <span style="color:#66d9ef">do</span> that.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  📝 Revise query
+</span></span><span style="display:flex;"><span>❯ ❌ Cancel
+</span></span></code></pre></div><p>So that must be the limit of that tool, so certainly we cannot do everything and are limited to some capacities. But is that really the End now? Lets try to shrink it down a little bit:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>fuzzywood$<span style="color:#f92672">]</span> gh? <span style="color:#e6db74">&#34;Please search for every file in my home directory and output the results in a csv sheetcalled &#34;</span>results.csv<span style="color:#e6db74">&#34; with the following rows:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">File Name,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Permissions,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Name of the Subfolder&#34;</span>
+</span></span></code></pre></div><p>So as you can see we cut off some parts from the original prompt in order to concentrate on the important part.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ──────────────────── Command ────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>find ~ -type f -exec stat -c <span style="color:#e6db74">&#34;%n,%A,%d&#34;</span> <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> &gt; results.csv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ────────────────── Explanation ──────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>○ find is used to list files.
+</span></span><span style="display:flex;"><span>  ◆ ~ specifies that we start the search in the home directory.
+</span></span><span style="display:flex;"><span>  ◆ -type f specifies that we only want to list files, not directories.
+</span></span><span style="display:flex;"><span>  ◆ -exec specifies that we want to execute a command <span style="color:#66d9ef">for</span> each file found.
+</span></span><span style="display:flex;"><span>    ◇ stat -c <span style="color:#e6db74">&#34;%n,%A,%d&#34;</span> <span style="color:#f92672">{}</span> prints the file name, permissions, and device number.
+</span></span><span style="display:flex;"><span>  ◆ <span style="color:#ae81ff">\;</span> specifies the end of the command to execute.
+</span></span><span style="display:flex;"><span>○ &gt; results.csv redirects the output of the find command to a file called results.csv.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>❯ ✅ Run this command
+</span></span><span style="display:flex;"><span>  📝 Revise query
+</span></span><span style="display:flex;"><span>  ❌ Cancel
+</span></span></code></pre></div><p>What a suprise we are actually presented with sort of a result and the File also looks quiet promising.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>fuzzywood$<span style="color:#f92672">]</span> tail results.csv -n <span style="color:#ae81ff">4</span> 
+</span></span><span style="display:flex;"><span>/home/fuzzywood/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/tools/dotnet-getdocument.deps.json,-rwxr--r--,65024
+</span></span><span style="display:flex;"><span>/home/fuzzywood/.nuget/NuGet/NuGet.Config,-rw-------,65024
+</span></span><span style="display:flex;"><span>/home/fuzzywood/.viminfo,-rw-------,65024
+</span></span><span style="display:flex;"><span>/home/fuzzywood/RiceInstaller,-rwxr--r--,65024
+</span></span></code></pre></div><p>As you can see, the last row was halucinated as the device id each time which sould have been the name from the supfolder.</p>
+<p>I could also propably fix that by trying to revise the query over and over again but i think you see my point here.</p>
+<h2 id="4-conclusion">4. Conclusion</h2>
+<p>Copilot is a also in the cli your friend and can help you in need. Things that often requiere a google search can now be fixed within the shell.</p>
+<p>I still recommend using the man pages and reading the docs as you should as a brave hacker. Because there are beeing written for a reason. Copilot should alway be seen as tool that gives tips to you and helps you understand the shell.</p>
+<p>For me personally it is very useful to refresh old knowledge and help me mastering the shell, so that one day i can rely on my own knowledge, rather than on copilot.</p>
+<h3 id="have-a-wonderful-day-you-all">Have a wonderful day you all!</h3>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

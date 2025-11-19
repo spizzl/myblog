@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>//localhost:1313/public/</loc>
+    <lastmod>2025-11-16T18:27:41+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/</loc>
+    <lastmod>2025-11-06T23:50:17+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/blog/lostintheshell/</loc>
+    <lastmod>2024-07-11T22:57:17+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2024-03-28T15:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+  </url>
+</urlset>

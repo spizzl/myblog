@@ -14,22 +14,65 @@
   inherits: false;
 }
 
-.face-card {
-  background-color: rgba(208, 250, 255, 0.9);
-  border-radius: .35em;
-  width: 28em;
-  height: 38em;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  left: 50%;
-  padding: 10vmin;
-  position: fixed;
-  text-align: center;
-  --bg: hsl(190deg 20% 10% / 25%);
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+@media (max-width: 600px) {
+  #cube-container {
+    width: 28em;
+    height: 38em;
+  }
 }
 
+#page1 {
+  transform: rotateY(0deg) translateZ(14em);
+}
+
+#page2 {
+  transform: rotateY(-90deg) translateZ(14em);
+}
+
+#page3 {
+  transform: rotateY(-180deg) translateZ(14em);
+}
+
+#page4 {
+  transform: rotateY(90deg) translateZ(14em);
+}
+
+#cube-container {
+  width: 28em;
+  height: 38em;
+  perspective: 230em;
+  margin: 0 auto 40px;
+}
+
+#cube {
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.face-card {
+  padding: 4em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(208, 250, 255, 0.9);
+  border-radius: .35em;
+  border: solid black 0.13em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  text-align: center;
+  --bg: hsl(190deg 20% 10% / 25%);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.face-content {
+  height: 100%;
+  width: 100%;
+}
 
 .app-header-avatar {
   user-select: none;

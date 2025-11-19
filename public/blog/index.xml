@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Spizzls Blog</title>
+    <link>//localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Spizzls Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jul 2024 22:57:17 +0200</lastBuildDate>
+    <atom:link href="//localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lost in the Shell? Github Copilot CLI Came to help you!</title>
+      <link>//localhost:1313/blog/lostintheshell/</link>
+      <pubDate>Thu, 11 Jul 2024 22:57:17 +0200</pubDate>
+      <guid>//localhost:1313/blog/lostintheshell/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/images/lostintheshell/shell.jpg&#34; alt=&#34;alt&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;propably-you-are-already-familiar-with-the-problem&#34;&gt;Propably you are already familiar with the problem:&lt;/h3&gt;&#xA;&lt;p&gt;As a hacker, that you are, you want to make the most within the shell but sometimes you end up not knowing how a certain task can be easily done. You know that in your back of your head but you just forgot.&lt;/p&gt;&#xA;&lt;p&gt;Well, gladly Github Copilot comes for you to help out.&lt;/p&gt;&#xA;&lt;h3 id=&#34;step-0-installing&#34;&gt;Step 0: Installing&lt;/h3&gt;&#xA;&lt;p&gt;If you are like me in Arch Linux you can install the cli tool simply by typing&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
