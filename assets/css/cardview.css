@@ -26,7 +26,7 @@
   transform: rotateY(0deg) translateZ(14em);
 }
 
-#page2 {
+#page4 {
   transform: rotateY(-90deg) translateZ(14em);
 }
 
@@ -34,7 +34,7 @@
   transform: rotateY(-180deg) translateZ(14em);
 }
 
-#page4 {
+#page2 {
   transform: rotateY(90deg) translateZ(14em);
 }
 
@@ -90,13 +90,8 @@
       white) border-box;
 }
 
-.wrap {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin: 0 auto;
-  perspective: 360px;
-  perspective-origin: 50% 50%;
+.avatar-title {
+  font-size: 1.5em;
 }
 
 .app-header-social {
@@ -108,16 +103,16 @@
 .icon-wrapper {
   position: relative;
   z-index: 1;
-  width: 4em;
-  height: 4em;
+  width: 3.3em;
+  height: 3.3em;
   margin: 20% auto;
 }
 
 .icon-wrapper svg {
   display: relative;
   z-index: 1;
-  width: 60%;
-  height: 60%;
+  width: 54%;
+  height: 54%;
   margin: 20% auto;
 }
 
