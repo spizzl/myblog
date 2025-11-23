@@ -17,10 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   function updateCube() {
-    const rotationY = -currentFace * 90;
+    const rotationY = -currentFace * 90 - 12;
     cube.style.transform = `rotateY(${rotationY}deg)`;
   }
-
-
 });
 
