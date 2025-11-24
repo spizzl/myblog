@@ -5,19 +5,26 @@ html {
 }
 
 @font-face {
-  font-family: 'Sansation';
-  src: "../static/fonts/Sansation-Regular.ttf", "../static/fonts/Sansation-Bold.ttf";
+  font-family: "Sansation";
+  src: url("/fonts/Sansation-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   position: relative;
   height: 100%;
-  background: linear-gradient(#8321d5 25%, #02092f 50%, #02092f 50%, #8321d5 100%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    #8321d5 25%,
+    #02092f 50%,
+    #02092f 50%,
+    #8321d5 100%
+  );
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Sansation';
+  font-family: "Sansation", sans-serif;
 }
 
 .page-container {

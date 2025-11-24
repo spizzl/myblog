@@ -1,26 +1,68 @@
 .posts-list {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1rem;
 }
 
 .posts-list-item {
   list-style: none;
-  padding: 0.4em 0;
+  padding: 1.5rem;
+  background-color: var(--color-background-card, #2a2a2a);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid var(--color-border-subtle, #3300c1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
-  &:not(:last-child) {
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 }
 
-.posts-list-item-description {
+@media (min-width: 768px) {
+  .posts-list-item {
+    width: calc(50% - 1rem);
+  }
+}
+
+.posts-list-item-title {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-heading, #ffffff);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+
+  &:hover {
+    color: var(--color-primary, #0038ff);
+    text-decoration: underline;
+  }
+}
+
+.posts-list-item-shortdesc {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-light, #cccccc);
+}
+
+.posts-list-item-metadata {
   display: flex;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 0.85rem;
+  color: var(--color-text-faded, #a0a0a0);
 
   > .icon {
-    margin-right: 0.4em;
+    margin-right: 0.3em;
   }
 }
 
 .posts-list-item-separator {
-  margin: 0 0.4em;
+  margin: 0 0.6em;
 }

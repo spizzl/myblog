@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en-us">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>Hack the Box - Titanic // Spizzls Blog</title>
+    <title>Hack the Box - Titanic // Fuzzywoods Blogs</title>
     <link rel="shortcut icon" href="favicons/" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Hugo 0.152.2">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Florin Wöginger" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.ad109709e5c8154ebf1cd3e1db602b264931c5203563be5cc27848444c7a93c1.css" />
+    <link rel="stylesheet" href="/css/main.min.ca1546949a23823bfb7e89d155224c5d3c279a0335ed6af0853a893ffc8eb730.css" />
     
 
     
@@ -16,13 +16,13 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hack the Box - Titanic">
   <meta name="twitter:description" content="This is my first writeup which will be added to the Hack The Box series.
-[fuzzywood] nmap 10.10.11.55 -sV Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 02:26 CET Nmap scan report for titanic.htb (10.10.11.55) Host is up (0.13s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.52 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 21.88 seconds">
+[fuzzywood] nmap 10.10.11.55 -sV Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 02:26 CET Nmap scan report for titanic.htb (10.10.11.55) Host is up (0.13s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.52 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 21.88 seconds So nothing particularly catches the eye right now. The Version guess also doesn’t seem to show any exploitable versions. So let start with looking at the webpage">
 
     <meta property="og:url" content="//localhost:1313/blog/htb-titanic/">
-  <meta property="og:site_name" content="Spizzls Blog">
+  <meta property="og:site_name" content="Fuzzywoods Blogs">
   <meta property="og:title" content="Hack the Box - Titanic">
   <meta property="og:description" content="This is my first writeup which will be added to the Hack The Box series.
-[fuzzywood] nmap 10.10.11.55 -sV Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 02:26 CET Nmap scan report for titanic.htb (10.10.11.55) Host is up (0.13s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.52 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 21.88 seconds">
+[fuzzywood] nmap 10.10.11.55 -sV Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 02:26 CET Nmap scan report for titanic.htb (10.10.11.55) Host is up (0.13s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.52 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 21.88 seconds So nothing particularly catches the eye right now. The Version guess also doesn’t seem to show any exploitable versions. So let start with looking at the webpage">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -36,14 +36,14 @@
     
     <header class="app-header">
       <a href="//localhost:1313/"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Florin Wöginger" /></a>
-      <span class="app-header-title">Spizzls Blog</span>
+      <span class="app-header-title">Fuzzywoods Blogs</span>
       <nav class="app-header-menu">
           <a class="app-header-menu-item" href="/">About</a>
             |
           
           <a class="app-header-menu-item" href="/blog/">My Blog</a>
       </nav>
-      <p>Dingsbumms Test</p>
+      <p>My Personal Website</p>
       <div class="app-header-social">
         
           <a href="mailto:florin@woeginger.de" target="_blank" rel="noreferrer noopener me">
@@ -60,33 +60,37 @@
 </svg>
           </a>
         
+          <a href="https://infosec.exchange/@fuzzywood" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
       </div>
     </header>
     
     <main class="app-container">
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Hack the Box - Titanic</h1>
-      <div class="post-meta">
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Hack the Box - Titanic</h1>
+    <div class="post-meta">
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Mar 5, 2025
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+</svg> Mar 5, 2025
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          1 min read
-        </div>
+</svg> 2 min read
       </div>
-    </header>
-    <div class="post-content">
-      <p>This is my first writeup which will be added to the Hack The Box series.</p>
+    </div>
+  </header>
+  <div class="post-content"><p>This is my first writeup which will be added to the Hack The Box series.</p>
 <pre tabindex="0"><code>[fuzzywood] nmap 10.10.11.55 -sV
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-05 02:26 CET
 Nmap scan report for titanic.htb (10.10.11.55)
@@ -99,12 +103,32 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 21.88 seconds
-</code></pre>
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
+</code></pre><p>So nothing particularly catches the eye right now. The Version guess also doesn&rsquo;t seem to show any exploitable versions. So let start with looking at the webpage</p>
+<p><img src="/images/htb-titanic/webpage.png" alt="Overview of the webpage"></p>
+<p>So it looks like a booking system. I could now deepdive a bit more, try to look for subdomains or anything further but since it is a easy system I am trying to look at the Booking System first, because at first sight it is the only endpoint for user input.</p>
+<p>I try to curl a request to the enpoint which is</p>
+<blockquote>
+<p><a href="http://titanic.htb/book">http://titanic.htb/book</a></p>
+</blockquote>
+<p>Lets try a normal looking request and look at the response.</p>
+<pre tabindex="0"><code>[fuzzywood] curl -X Post -d &#34;name=marc&#34; -d &#34;email=test@user.net&#34; -d &#34;phone=12345678&#34; -d &#34;date=2027-01-01&#34; -d &#34;cabin=standard&#34; http://titanic.htb/book
+&lt;!doctype html&gt;
+&lt;html lang=en&gt;
+&lt;title&gt;Redirecting...&lt;/title&gt;
+&lt;h1&gt;Redirecting...&lt;/h1&gt;
+&lt;p&gt;You should be redirected automatically to the target URL: &lt;a href=&#34;/download?ticket=0286bb31-401f-4623-a6a3-3723ac643090.json&#34;&gt;/download?ticket=0286bb31-401f-4623-a6a3-3723ac643090.json&lt;/a&gt;. If not, click the link.
+</code></pre><p>The server responses with a download link. Lets look at the ticket, which is a json file:</p>
+<pre tabindex="0"><code>[fuzzywood] curl -X GET &#34;http://titanic.htb/download?ticket=ff65997a-fa6f-489d-a2a4-e3164e86e09b.json&#34;
+{&#34;name&#34;: &#34;marc&#34;, &#34;email&#34;: &#34;test@user.net&#34;, &#34;phone&#34;: &#34;12345678&#34;, &#34;date&#34;: &#34;2027-01-01&#34;, &#34;cabin&#34;: &#34;standard&#34;}
+</code></pre><p>This looks nothing special for now. We are just getting the exact same response, as we requested.
+Lets try and spice things up an try to manipulate the user input with known special characters.</p>
+<pre tabindex="0"><code>[fuzzywood] curl -X Post -d &#39;name=&#34;;\marc&#39; -d &#34;email=test@user.net&#34; -d &#34;phone=12345678&#34; -d &#34;date=2027-01-01&#34; -d &#34;cabin=standard&#34; http://titanic.htb/book
+[fuzzywood] curl -X GET &#34;http://titanic.htb/download?ticket=c046e336-20bb-45fb-8e5b-1da04b246a96.json&#34;
+{&#34;name&#34;: &#34;\&#34;;\\marc&#34;, &#34;email&#34;: &#34;test@user.net&#34;, &#34;phone&#34;: &#34;12345678&#34;, &#34;date&#34;: &#34;2027-01-01&#34;, &#34;cabin&#34;: &#34;standard&#34;}
+</code></pre><p>As we can see our input clearly get sanitized here. Lets look at the download enpoint here. It takes exactly</p>
+</div>
+  <div class="post-footer"></div>
+</article>
 
     </main>
   </body>

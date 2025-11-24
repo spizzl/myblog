@@ -1,8 +1,10 @@
 +++
 title = 'Hack the Box - Titanic'
 date = 2025-03-05T15:01:00+01:00
-draft = true
-difficulty = "easy"
+draft = false 
+[params]
+  difficulty = "easy"
+  shortdesc = ""
 +++
 
 This is my first writeup which will be added to the Hack The Box series.

@@ -1,11 +1,13 @@
 baseURL = 'florin.woeginger.de'
 languageCode = 'en-us'
-title = 'Spizzls Blog'
+title = 'Fuzzywoods Blogs'
 theme = "m10c"
-authour = "Florin"
-description = "Dings diggah"
-
+authour = "Fuzzywood"
+description = "We <3 hacking"
 [[menu.main]]
   identifier = "tags"
-  name = "Diggah"
+  name = "tags"
   url = "/tags/"
+[params]
+  short_desc = ""
+  difficulty = ""
