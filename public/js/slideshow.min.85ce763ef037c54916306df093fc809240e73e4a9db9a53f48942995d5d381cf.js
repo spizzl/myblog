@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){let e=0,t=3;cube=document.getElementById("cube");function o(t){e=t,s()}function n(){e=(e+1)%t}setInterval(n,5e3);function s(){const t=e*90;cube.style.transform=`rotateY(${t}deg)`}})

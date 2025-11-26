@@ -4,14 +4,6 @@ html {
   font-family: sans-serif;
 }
 
-@font-face {
-  font-family: "Sansation";
-  src: url("/fonts/Sansation-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   position: relative;
   height: 100%;
@@ -24,7 +16,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Sansation", sans-serif;
+  overflow: hidden;
+}
+:root {
+  --cube-width: 28em;
+  --cube-height: 38em;
+  --cube-depth: 28em;
+  --cube-trans-z: calc(var(--cube-depth) / 2);
+  --cube-trans-y: calc(var(--cube-height) / 2);
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("/fonts/Sansation-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 .page-container {
@@ -33,15 +39,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
+  perspective: 2500px;
 }
 
 .wrap {
   width: 100%;
   height: 100%;
   position: absolute;
-  margin: 0 auto;
-  perspective: 360px;
-  perspective-origin: 50% 50%;
+  perspective: 1000px;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .footer-text {

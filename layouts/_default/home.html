@@ -35,46 +35,50 @@
 	</div>
 <div class="page-container">
   <div class="nav-arrow" id="arrow-left">{{ partial "icon-nav.html" (dict "ctx" $ "name" "arrow-left")}}</div>
-  <div id="cube-container">
-    <div id="cube">
-      <div class="face-card page1">
-        <div class="face-content">
-          <a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-          <h1 class="avatar-title">Florin Wöginger</h1>
-          <div id="typewriter"></div>
-          <script type="text/javascript">
-            const instance = new Typewriter('#typewriter', {
-              strings: {{ .Site.Params.describeme }},
-              autoStart: true,
-              cursor: "▌",
-              loop: true,
-            });
-          </script>
-            {{- with .Site.Params.social }}
-            <div class="app-header-social">
-              {{ range . }}
-                <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
-                  {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .title) }}
-                </a>
-              {{ end }}
+  <div id="tilt-wrapper">
+    <div id="cube-container">
+      <div id="cube">
+        <div class="top-face"></div>
+        <div class="face-card page1">
+          <div class="face-content">
+            <a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
+            <h1 class="avatar-title">Florin Wöginger</h1>
+            <div id="typewriter"></div>
+            <script type="text/javascript">
+              const instance = new Typewriter('#typewriter', {
+                strings: {{ .Site.Params.describeme }},
+                autoStart: true,
+                cursor: "▌",
+                loop: true,
+              });
+            </script>
+              <div class="app-header-social">
+                {{- with .Site.Params.social }}
+                  {{ range . }}
+                    <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
+                      {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .title) }}
+                    </a>
+                  {{ end }}
+                {{- end }}
+              </div>
             </div>
-            {{- end }}
+        </div>
+        <div class="face-card page2">
+          <div class="face-content">
+            <h1>Page 2</h1>
           </div>
-      </div>
-      <div class="face-card page2">
-        <div class="face-content">
-          <h1>Page 2</h1>
         </div>
-      </div>
-      <div class="face-card page3">
-        <div class="face-content">
-          <h1>Page 3</h1>
+        <div class="face-card page3">
+          <div class="face-content">
+            <h1>Page 3</h1>
+          </div>
         </div>
-      </div>
-      <div class="face-card page4">
-        <div class="face-content">
-          <h1>Page 4</h1>
+        <div class="face-card page4">
+          <div class="face-content">
+            <h1>Page 4</h1>
+          </div>
         </div>
+        <div class="bottom-face"></div>
       </div>
     </div>
   </div>

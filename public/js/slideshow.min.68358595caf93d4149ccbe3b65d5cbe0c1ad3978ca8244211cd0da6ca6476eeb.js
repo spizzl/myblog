@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){let e=0,t=3;cube=document.getElementById("cube")})
