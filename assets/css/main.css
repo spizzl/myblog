@@ -7,12 +7,7 @@ html {
 body {
   position: relative;
   height: 100%;
-  background: linear-gradient(
-    #8321d5 25%,
-    #02092f 50%,
-    #02092f 50%,
-    #8321d5 100%
-  );
+  background-color: var(--bg-center);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,6 +19,23 @@ body {
   --cube-depth: 28em;
   --cube-trans-z: calc(var(--cube-depth) / 2);
   --cube-trans-y: calc(var(--cube-height) / 2);
+  --primary-gradient: linear-gradient(135deg, #cea79b 0%, #910007 100%);
+  --accent-gradient: linear-gradient(135deg, #910007 0%, #7e3cce 100%);
+
+  --bg-top: #240046;
+  --bg-mid: #7b2cbf;
+  --bg-center: #050011;
+  --bg-bottom: #6610f2;
+  --grid-line: rgba(255, 255, 255, 0.5);
+
+  --grid-size: 80px;
+
+  --speed: 10s;
+
+  --mountain-light: #5e1799;
+  --mountain-dark: #240046;
+  --mountain-back-light: #3c096c;
+  --mountain-back-dark: #10002b;
 }
 @font-face {
   font-family: "Sansation";

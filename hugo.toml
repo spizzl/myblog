@@ -1,9 +1,9 @@
 baseURL = 'florin.woeginger.de'
 languageCode = 'en-us'
-title = 'Fuzzywoods Blogs'
+title = 'Fuzzywood'
 theme = "m10c"
 authour = "Fuzzywood"
-description = "We <3 hacking"
+description = "<3 hacking"
 [[menu.main]]
   identifier = "tags"
   name = "tags"

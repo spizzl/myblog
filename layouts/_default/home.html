@@ -23,69 +23,186 @@
     {{ with resources.Get "css/cardview.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{ end }}
+    {{ with resources.Get "css/post-list.css" | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{ end }}
     {{ with resources.Get "css/background.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{ end }}
 	</head>
 	<body>
+    <div class="scene">
+        <div class="stars"></div>
+        <div class="mountains-back"></div>
+        <div class="mountains"></div>
+        
+        <!-- Removed grid-top div -->
+        <div class="grid-plane grid-bottom"></div>
+        
+        <div class="fog"></div>
+        <div class="horizon"></div>
+        <div class="vignette"></div>
+    </div>
+    <div class="page-container">
+      <div class="nav-arrow" id="arrow-left">{{ partial "icon-nav.html" (dict "ctx" $ "name" "arrow-left")}}</div>
+      <div id="tilt-wrapper">
+        <div id="cube-container">
+          <div id="cube">
+            
+            <div class="top-face"></div>
+            <div class="bottom-face"></div>
 
-	<div class="wrap">
-	<div class="top-plane"></div>
-	<div class="bottom-plane"></div>
-	</div>
-<div class="page-container">
-  <div class="nav-arrow" id="arrow-left">{{ partial "icon-nav.html" (dict "ctx" $ "name" "arrow-left")}}</div>
-  <div id="tilt-wrapper">
-    <div id="cube-container">
-      <div id="cube">
-        <div class="top-face"></div>
-        <div class="face-card page1">
-          <div class="face-content">
-            <a href="/blog"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
-            <h1 class="avatar-title">Florin Wöginger</h1>
-            <div id="typewriter"></div>
-            <script type="text/javascript">
-              const instance = new Typewriter('#typewriter', {
-                strings: {{ .Site.Params.describeme }},
-                autoStart: true,
-                cursor: "▌",
-                loop: true,
-              });
-            </script>
-              <div class="app-header-social">
-                {{- with .Site.Params.social }}
-                  {{ range . }}
-                    <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
-                      {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .title) }}
-                    </a>
-                  {{ end }}
-                {{- end }}
+            <div class="face-card page1">
+              <div class="face-content">
+                <img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}"/>
+                <h1 class="avatar-title">Florin Wöginger</h1>
+                <div id="typewriter"></div>
+
+                <div class="app-header-social">
+                  <a href="mailto:florin@woeginger.de" target="_blank" rel="noreferrer noopener">
+                    <div class="icon-wrapper">
+                      <div class="icon-background"></div>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      <span class="icon-text">Email</span>
+                    </div>
+                  </a>
+
+                  <a href="https://github.com/spizzl" target="_blank" rel="noreferrer noopener">
+                    <div class="icon-wrapper">
+                      <div class="icon-background"></div>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      <span class="icon-text">GitHub</span>
+                    </div>
+                  </a>
+
+                  <a href="https://infosec.exchange/@fuzzywood" target="_blank" rel="noreferrer noopener">
+                    <div class="icon-wrapper">
+                      <div class="icon-background"></div>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                      </svg>
+                      <span class="icon-text">Mastodon</span>
+                    </div>
+                  </a>
+
+                </div>
+
+                <a href="/blog" class="cta-button">
+                  Come Visit My Blog <span class="arrow">→</span>
+                </a>
               </div>
             </div>
-        </div>
-        <div class="face-card page2">
-          <div class="face-content">
-            <h1>Page 2</h1>
+
+            <div class="face-card page2">
+              <div class="face-content text-left">
+                <h2 class="face-title">My Skillset</h2>
+                <div class="skills-container">
+                  
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span>Python3</span>
+                      <span>75%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" data-width="75%"></div></div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span>Cybersecurity (Pentesting)</span>
+                      <span>65%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" data-width="65%"></div></div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span>Linux</span>
+                      <span>60%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" data-width="60%"></div></div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span>Cloud infrastructure</span>
+                      <span>50%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" data-width="50%"></div></div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span>Javascript</span>
+                      <span>45%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" data-width="45%"></div></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="face-card page3">
+              <div class="face-content text-left">
+                <h2 class="face-title">Vita</h2>
+                <div class="timeline">
+                  
+                  <div class="timeline-item">
+                    <span class="timeline-date">2024 - Today</span>
+                    <h3 class="timeline-head">HTW - University of Applied Science</h3>
+                    <p class="timeline-desc">Computer Science Student</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">2022-2023</span>
+                    <h3 class="timeline-head">Stadt Nach Acht Conference</h3>
+                    <p class="timeline-desc">Website development (CMS System)</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">2022</span>
+                    <h3 class="timeline-head">WvH School</h3>
+                    <p class="timeline-desc">Centralized MDM management</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">2021</span>
+                    <h3 class="timeline-head">High School Diploma</h3>
+                  </div>
+                  
+                  <div class="timeline-item">
+                    <span class="timeline-date">2016</span>
+                    <h3 class="timeline-head">Fraunhofer Fokus</h3>
+                    <p class="timeline-desc">Quality Engineering<br>Internship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="face-card page4">
+              <div class="face-content">
+                <h2 class="face-title">My Latest Blog Articles</h2>
+                <div class="posts-list-scroll">
+                  {{ range where .Paginator.Pages "Type" "!=" "page" }}
+                    <a href="#" class="mini-post-card">
+                      <span class="mini-post-title">{{ .Title }}</span>
+                      <span class="mini-post-shortdesc">{{ .Params.shortdesc | default ""}}</span>
+                    </a>
+                  {{ end}}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="face-card page3">
-          <div class="face-content">
-            <h1>Page 3</h1>
-          </div>
-        </div>
-        <div class="face-card page4">
-          <div class="face-content">
-            <h1>Page 4</h1>
-          </div>
-        </div>
-        <div class="bottom-face"></div>
       </div>
+      <div class="nav-arrow" id="arrow-right">{{ partial "icon-nav.html" (dict "ctx" $ "name" "arrow-right")}}</div>
     </div>
-  </div>
-  <div class="nav-arrow" id="arrow-right">{{ partial "icon-nav.html" (dict "ctx" $ "name" "arrow-right")}}</div>
-</div>
-	<footer>
-		<p class="footer-text">© 2025. All rights reserved.</p>
-	</footer>
+    <footer>
+      <p class="footer-text">© 2025. All rights reserved.</p>
+    </footer>
 	</body>
 </html>

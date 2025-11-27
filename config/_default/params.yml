@@ -1,7 +1,7 @@
 title: "Florin"
 author: "Florin Wöginger"
 copyright: "2024"
-description: "My Personal Website"
+description: "<3 hacking"
 avatar: "images/avatar.jpg"
 menu_item_separator: "|"
 favicon: "favicons/"
@@ -10,11 +10,9 @@ describeme: ["Student.", "Coder.", "Mate Addict :)"]
 homepage:
   - "about"
 
-
 singleDateFormat: "2006-02-01"
 indexDateFormat: "2006-02-01"
 listDateFormat: "2006-02-01"
-
 
 style:
   darkestColor: "#252130"
@@ -22,7 +20,6 @@ style:
   lightColor: "#ebeeff"
   lightestColor: "#ffffff"
   primaryColor: "#c75c5c"
-
 
 social:
   "GitHub":

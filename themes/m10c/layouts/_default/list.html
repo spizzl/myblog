@@ -9,15 +9,13 @@
         {{ .Title }}
       </a>
 
-      <p class="posts-list-item-shortdesc">
-        A brief, engaging summary of the article content goes here.
-      </p>
+      <p class="posts-list-item-shortdesc">{{ .Params.shortdesc }}</p>
 
       <span class="posts-list-item-metadata">
         {{ partial "icon_blog.html" (dict "ctx" $ "name" "calendar") }}
-        <span class="metadata-item"
-          >{{ .PublishDate.Format "Jan 2, 2006" }}</span
-        >
+        <span class="metadata-item">
+          {{ .PublishDate.Format "Jan 2, 2006" }}
+        </span>
         <span class="posts-list-item-separator">•</span>
         {{ partial "icon_blog.html" (dict "ctx" $ "name" "clock") }}
         <span class="metadata-item">{{ .ReadingTime }} min read</span>
