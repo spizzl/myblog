@@ -28,7 +28,7 @@ footer {
 /* 2. Cube & Card Styles (from cardview.min.css) */
 #tilt-wrapper {
   transform-style: preserve-3d;
-  transition: transform 0.1s linear;
+  transition: transform 0.6s ease-out;
 } /* Smoother mouse movement */
 #cube-container {
   width: var(--cube-width);
