@@ -187,8 +187,8 @@
               <div class="face-content">
                 <h2 class="face-title">My Latest Blog Articles</h2>
                 <div class="posts-list-scroll">
-                  {{ range where .Paginator.Pages "Type" "!=" "page" }}
-                    <a href="#" class="mini-post-card">
+                  {{ range where .Paginator.Pages "Type" "!=" "page"}}
+                    <a href="{{ .Permalink }}" class="mini-post-card">
                       <span class="mini-post-title">{{ .Title }}</span>
                       <span class="mini-post-shortdesc">{{ .Params.shortdesc | default ""}}</span>
                     </a>
