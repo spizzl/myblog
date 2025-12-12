@@ -2,7 +2,8 @@
 title = 'Lost in the Shell? Github Copilot CLI Came to help you!'
 date = 2024-07-11T22:57:17+02:00
 draft = false
-shortdesc = ""
+[params]
+  description = ""
 +++
 
 ![alt](/images/lostintheshell/shell.jpg)

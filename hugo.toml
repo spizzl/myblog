@@ -9,5 +9,6 @@ description = "<3 hacking"
   name = "tags"
   url = "/tags/"
 [params]
-  short_desc = ""
+  description = ""
   difficulty = ""
+  images = ['images/default-cover.png']

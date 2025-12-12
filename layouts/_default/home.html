@@ -190,7 +190,7 @@
                   {{ range where .Paginator.Pages "Type" "!=" "page"}}
                     <a href="{{ .Permalink }}" class="mini-post-card">
                       <span class="mini-post-title">{{ .Title }}</span>
-                      <span class="mini-post-shortdesc">{{ .Params.shortdesc | default ""}}</span>
+                      <span class="mini-post-shortdesc">{{ .Params.description | default ""}}</span>
                     </a>
                   {{ end}}
                 </div>

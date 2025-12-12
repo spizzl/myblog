@@ -4,7 +4,7 @@ date = 2025-03-05T15:01:00+01:00
 draft = false 
 [params]
   difficulty = "easy"
-  shortdesc = ""
+  description = ""
 +++
 
 This is my first writeup which will be added to the Hack The Box series.

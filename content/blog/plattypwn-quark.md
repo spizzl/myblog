@@ -2,7 +2,8 @@
 title = 'Plattypwn Quark'
 date = 2025-11-16T18:27:41+01:00
 draft = false
-shortdesc = "What happens if you mix LaTeX and Markdown?"
+[params]
+  description = "What happens if you mix LaTeX and Markdown?"
 +++
 
 I was lucky enough to participate in PlatyPWN 2025 on-site, hosted by members of the HPI in Potsdam. The challenges ranged from easy to hard across a lot of different fields.

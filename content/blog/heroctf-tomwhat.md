@@ -4,7 +4,7 @@ date = 2025-12-02T01:48:05+01:00
 draft = false
 [params]
   difficulty = "Medium"
-  shortdesc = "Exploiting Tomcat Misconfigurations"
+  description = "Exploiting Tomcat Misconfigurations"
 +++
 
 HeroCTF v7 was a Capture the Flag event that took place during the last weekend of November. I participated online and was able to solve a few of the interesting challenges.

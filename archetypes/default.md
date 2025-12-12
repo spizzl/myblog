@@ -4,5 +4,5 @@ date = {{ .Date }}
 draft = true
 [params]
   difficulty = ""
-  shortdesc = ""
+  description = ""
 +++

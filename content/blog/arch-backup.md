@@ -2,7 +2,6 @@
 title = 'Arch Backup'
 date = 2025-07-17T23:45:41+02:00
 draft = true 
-shortdesc = ""
 [params]
-  shortdesc = "Writeup for HTB Code machine"
+  description = "Writeup for HTB Code machine"
 +++
