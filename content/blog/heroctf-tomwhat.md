@@ -157,6 +157,6 @@ Look at that! This seems to be the exact application we were looking for. The Se
 
 ![Greetings](/images/tomwhat/greetings.png)
 
-We successfully compromised the admin interface from the dark side, what a gread day for the light side! And what a perfect example of what can happen if you decide to leave post-installation defaults exposed!
+We successfully compromised the admin interface from the dark side, what a gread day for the light side! And what a perfect example of what can happen if you decide to leave post-installation defaults exposed! Also checkout my other Writeup which happens to be another HeroCTF challenge.
 
 ![Lord Sidious](/images/tomwhat/lord.jpg)
