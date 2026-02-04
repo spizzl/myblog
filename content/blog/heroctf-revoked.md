@@ -1,7 +1,7 @@
 +++
 title = 'HeroCTF Revoked Revenge'
 date = 2025-12-18T15:29:46+01:00
-draft = false
+draft = true
 [params]
   difficulty = ""
   description = "A JWT biggest Nightmare"
