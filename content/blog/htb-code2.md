@@ -4,7 +4,7 @@ date = 2026-03-05T13:30:21+01:00
 draft = true
 [params]
   difficulty = "easy"
-  description = ""
+  description = "Hack the Box - Code Part 2"
 
 +++
 
